@@ -1,0 +1,24 @@
+{
+  "name": "@beeman/pnpm-workspace-cli",
+  "description": "A cli for pnpm-workspace",
+  "version": "0.0.1",
+  "module": "index.ts",
+  "type": "module",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beeman/pnpm-workspace.git",
+    "directory": "apps/cli"
+  },
+  "scripts": {
+    "dev": "tsx index.ts"
+  },
+  "dependencies": {
+    "@beeman/pnpm-workspace-add": "workspace:*",
+    "@beeman/pnpm-workspace-calc": "workspace:*",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

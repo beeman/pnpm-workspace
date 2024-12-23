@@ -1,0 +1,1 @@
+# @beeman/pnpm-workspace-cli

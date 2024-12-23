@@ -3,7 +3,7 @@ name: autofix.ci # needed to securely identify the workflow
 on:
   pull_request:
   push:
-    branches: ['main', 'dev']
+    branches: [ 'main', 'dev' ]
 
 permissions:
   contents: read
@@ -20,6 +20,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm fmt
-      - uses: autofix-ci/action@ff86a557419858bb967097bfc916833f5647fa8c
+      - name: autofix.ci
+        uses: autofix-ci/action@v1.3.1
         with:
           commit-message: 'chore: apply automated updates'
